@@ -1,35 +1,19 @@
-# Signals and Systems Project – DOA Estimation
+# DOA Estimation with ESPRIT (LS & TLS) – MATLAB
 
 ## Overview
-This repository contains the implementation and report for my *Signals and Systems* course project at Sharif University of Technology. The project focuses on **Direction of Arrival (DOA) estimation** in array signal processing, exploring both classical and advanced algorithms. MATLAB was used to implement and test these methods under various scenarios.
+This repository contains my *Signals and Systems* course project at Sharif University of Technology. The project implements **ESPRIT** algorithms for **Direction of Arrival (DOA)** estimation of narrowband sources received by a uniform linear array. Two estimation pipelines are included:
+
+- **LS–ESPRIT**: classical least-squares solution of the shift-invariance equations.  
+- **TLS–ESPRIT**: total least-squares variant that accounts for noise and errors in both sides of the equations.  
+
+The accompanying report explains array and steering-vector modeling, covariance estimation, eigen-decomposition, signal/noise subspace separation, solving the ESPRIT invariance relation, and converting eigenvalues to arrival angles.
 
 ---
 
-## Project Objectives
-The aim of the project is to study and compare methods for estimating the angle of arrival of multiple signals received by an antenna array. The work highlights both theoretical foundations and practical simulation results, emphasizing accuracy, robustness, and computational efficiency.
-
----
-
-## Methods Implemented
-- **Least Squares (LS)** and **Total Least Squares (TLS)** approaches for parameter estimation.  
-- **ESPRIT (Estimation of Signal Parameters via Rotational Invariance Techniques)** for efficient DOA estimation.  
-- Comparison with **MUSIC** and other classical spectral-based algorithms.  
-- Simulation of coherent and incoherent sources, wideband signals, and different array geometries.  
-
----
-
-## Repository Contents
-- `main.m` – Main MATLAB script for running DOA experiments.  
-- `TLS.m` – Implementation of the Total Least Squares algorithm.  
-- `Report.pdf` – Full project report (in Persian) including theoretical background, methodology, and results.  
-
----
-
-## Key Topics
-- Array signal processing and steering vectors.  
-- Eigen-decomposition and subspace methods.  
-- Challenges with wideband signals, noise, and coherence.  
-- Comparative evaluation of DOA estimation methods.  
+## File Structure
+- `main.m` — Reproducible demo: generates/simulates array data and runs LS-ESPRIT.  
+- `TLS.m` — Functions for TLS-ESPRIT (building the partitioned subspaces and solving the TLS problem).  
+- `Report.pdf` — Full project report (in Persian): theory, derivations, assumptions, pros/cons, and worked examples.  
 
 ---
 
